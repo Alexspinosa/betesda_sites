@@ -1,0 +1,22 @@
+
+{% extends "home/base.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% load static %}
+{% block content %}
+  {% for block in page.body %}
+    <section class="py-5" id="section-{{ forloop.counter }}">
+      <div class="container">
+        {% if block.block_type == "card" %}
+          <div class="row">
+            <div class="col-md-4">
+              {{ block }}
+            </div>
+          </div>
+        {% else %}
+          {{ block }}
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+{% endblock %}

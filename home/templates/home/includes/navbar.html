@@ -1,0 +1,23 @@
+{% load wagtailcore_tags wagtailimages_tags static menu_tags %}
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom fixed-top">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/logo_blanco.png' %}" alt="logo_betesda">
+    </a>
+
+    <!-- Botón menú móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      {% render_menu "main" %}
+
+    </div>
+  </div>
+</nav>

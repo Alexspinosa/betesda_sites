@@ -1,0 +1,13 @@
+
+<div class="tarjeta-item col-md-4 mb-4">
+  <div class="card h-100 shadow-sm">
+    <img src="/static/img/temp/tarjeta.jpg" class="card-img-top tarjeta-img" alt="Imagen temporal">
+    <div class="card-body">
+      <h5 class="card-title tarjeta-titulo">{{ value.titulo }}</h5>
+      <p class="card-text tarjeta-descripcion">{{ value.descripcion }}</p>
+      {% if value.enlace %}
+        <a href="{{ value.enlace }}" class="btn btn-outline-primary tarjeta-boton">Ver más</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+
+<div class="evento-item p-3 mb-4 bg-light rounded shadow-sm d-flex align-items-center">
+  <div class="evento-imagen-container me-3">
+    <img src="/static/img/temp/evento.jpg" alt="Imagen temporal" class="evento-img rounded">
+  </div>
+  <div class="evento-contenido">
+    <h4 class="evento-titulo">{{ value.titulo }}</h4>
+    <p class="evento-fecha text-muted mb-1">{{ value.fecha }}</p>
+    <p class="evento-descripcion mb-1">{{ value.descripcion }}</p>
+    {% if value.enlace %}
+      <a href="{{ value.enlace }}" class="btn btn-sm btn-primary evento-boton">Más info</a>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+
+  <!DOCTYPE html>
+  <html lang="es">
+
+
+    {% include "home/includes/head.html" %}
+
+    <body>
+    {% include "home/includes/navbar.html" %}
+      <main class="container-fluid py-5">
+        {% block content %}{% endblock %}
+      </main>
+
+      {% include "home/includes/footer.html" %}
+      {% include "home/includes/scripts.html" %}
+      {% block extra_scripts %}{% endblock %}
+    </body>
