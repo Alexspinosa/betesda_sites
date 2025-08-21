@@ -27,6 +27,14 @@
   color: var(--color-primary);
 }
 
+.navbar-custom .navbar-brand img {
+  height: 50px;         /* Ajusta el alto del logo al navbar */
+  width: auto;          /* Mantiene proporción */
+  object-fit: contain;  /* Contiene la imagen sin deformar */
+  display: block;
+  margin-right: 0;
+}
+
 /* Links principales */
 .navbar-custom .navbar-nav {
   gap: 1rem;
@@ -36,14 +44,14 @@
   position: relative;
   color: var(--color-dark);
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1rem 1rem;
   transition: color 0.3s ease;
 }
 
-/* Subrayado Animado */
+/* Subrayado animado */
 .navbar-custom .nav-link::after {
   content: "";
   position: absolute;
@@ -62,14 +70,14 @@
   transform: scaleX(1);
 }
 
-/* Hover & active */
+/* Hover y activo */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
   color: var(--color-primary);
 }
 
 /* ========================
-    DROPDOWN
+   DROPDOWN
 ======================== */
 .navbar-custom .dropdown-menu {
   font-size: 1rem;
@@ -84,22 +92,23 @@
   position: absolute;
 }
 
+/* Mostrar dropdown al hacer hover (solo desktop) */
 .navbar-custom .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
-/* Items */
+/* Items del dropdown */
 .navbar-custom .dropdown-item {
   padding: 0.5rem 1rem;
   font-weight: 600;
   color: var(--color-dark);
   transition: color 0.3s ease;
-  background-color: transparent; /* Limpieza de fondo */
+  background-color: transparent;
 }
 
-/* Hover: solo cambia color */
+/* Hover y foco del dropdown */
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus {
   color: var(--color-primary);
@@ -107,7 +116,7 @@
 }
 
 /* ========================
-    TOGGLER (menú móvil)
+   TOGGLER (menú móvil)
 ======================== */
 .navbar-custom .navbar-toggler {
   border: none;

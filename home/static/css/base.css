@@ -118,50 +118,96 @@ p, li, a, span {
   font-size: 1.25rem;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ======================== FOOTER ======================== */
 .site-footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 3rem 0 1rem;
-  font-family: var(--font-sans);
+    background-color: #000000; /* Fondo oscuro */
+    color: #ccc;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-family: var(--font-body);
 }
 
+/* ======================== LOGO Y TEXTO ======================== */
+.site-footer .footer-logo {
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.site-footer p.small {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* ======================== TITULOS ======================== */
 .site-footer .footer-title {
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ======================== LISTAS ======================== */
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 0.5rem;
 }
 
 .site-footer ul li a {
-  color: #ccc;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .site-footer ul li a:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
+/* ======================== REDES SOCIALES ======================== */
 .site-footer .social-link {
-  color: #ccc;
-  font-size: 1.3rem;
-  margin-right: 0.8rem;
-  transition: color 0.3s ease;
+    text-decoration: none; 
+    color: #ccc;
+    display: block;        /* Uno debajo del otro */
+    margin-bottom: 0.5rem; /* Separación entre iconos */
+    font-size: 1.2rem;     /* Tamaño de los iconos */
+    transition: color 0.3s ease;
 }
 
 .site-footer .social-link:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #444;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  font-size: 0.85rem;
+/* ======================== FILA Y COLUMNAS ======================== */
+.site-footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Espacio entre columnas */
+}
+
+/* ======================== LINEA INFERIOR ======================== */
+.site-footer .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 768px) {
+    .site-footer .text-lg-start {
+        text-align: center !important;
+    }
+    .site-footer .social-link {
+        display: inline-block; /* Horizontal en móvil si quieres */
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 }
