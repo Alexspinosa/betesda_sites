@@ -4,21 +4,45 @@
   {% for item in root_items %}
     {% with children=item.children.all %}
       {% if children %}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown{{ item.id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <!-- Mega Menu -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown{{ item.id }}" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
             {{ item.title }}
           </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown{{ item.id }}">
-            {% for child in children %}
-              <li>
-                <a class="dropdown-item" href="{{ child.link_page.url|default:child.link_url }}" {% if child.open_in_new_tab %}target="_blank"{% endif %}>{{ child.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+          <div class="dropdown-menu mega-menu p-4" aria-labelledby="dropdown{{ item.id }}">
+            <div class="row">
+              {% for child in children %}
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">{{ child.title }}</h6>
+                  {% if child.children.exists %}
+                    {% for sub in child.children.all %}
+                      <a class="dropdown-item"
+                         href="{{ sub.link_page.url|default:sub.link_url }}"
+                         {% if sub.open_in_new_tab %}target="_blank"{% endif %}>
+                        {{ sub.title }}
+                      </a>
+                    {% endfor %}
+                  {% else %}
+                    <a class="dropdown-item"
+                       href="{{ child.link_page.url|default:child.link_url }}"
+                       {% if child.open_in_new_tab %}target="_blank"{% endif %}>
+                      {{ child.title }}
+                    </a>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
         </li>
       {% else %}
+        <!-- Enlace normal -->
         <li class="nav-item">
-          <a class="nav-link" href="{{ item.link_page.url|default:item.link_url }}" {% if item.open_in_new_tab %}target="_blank"{% endif %}>{{ item.title }}</a>
+          <a class="nav-link"
+             href="{{ item.link_page.url|default:item.link_url }}"
+             {% if item.open_in_new_tab %}target="_blank"{% endif %}>
+            {{ item.title }}
+          </a>
         </li>
       {% endif %}
     {% endwith %}

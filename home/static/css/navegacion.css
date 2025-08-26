@@ -83,13 +83,14 @@
   font-size: 1rem;
   padding: 0.3rem 0;
   border-radius: 0;
-  border-top: 2px solid var(--color-primary);
+  border: none;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   display: block;
   visibility: hidden;
   position: absolute;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Mostrar dropdown al hacer hover (solo desktop) */
@@ -102,7 +103,7 @@
 /* Items del dropdown */
 .navbar-custom .dropdown-item {
   padding: 0.5rem 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-dark);
   transition: color 0.3s ease;
   background-color: transparent;
@@ -126,4 +127,17 @@
 .navbar-custom .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* Mega menú ancho completo */
+.navbar-custom .dropdown-menu.mega-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+}
+
+/* Columnas dentro del mega menú */
+.navbar-custom .mega-menu .col-md-4 {
+  padding: 0rem;
 }

@@ -172,7 +172,7 @@ p, li, a, span {
 
 /* ======================== REDES SOCIALES ======================== */
 .site-footer .social-link {
-    text-decoration: none; 
+    text-decoration: none;
     color: #ccc;
     display: block;        /* Uno debajo del otro */
     margin-bottom: 0.5rem; /* Separación entre iconos */
@@ -210,4 +210,32 @@ p, li, a, span {
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
     }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Texto debajo del logo */
+  align-items: center; /* centra logo y texto */
+  gap: 10px;           /* Espacio entre logo y texto */
+}
+
+.typewriter {
+  display: inline-block;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid #000; /* Cursor */
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Cursor parpadeante */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
 }
