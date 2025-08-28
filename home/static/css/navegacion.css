@@ -1,19 +1,21 @@
 /* ========================
-   NAVBAR PRINCIPAL
+NAVBAR PRINCIPAL
 ======================== */
 .navbar-custom {
-  position: fixed;
+  position: fixed; /* Fija la barra de navegación en la parte superior */
   top: 0;
-  width: 100%;
+  width: 100%; /* Ancho completo */
   background-color: var(--blue-800);
-  font-family: var(--font-title);
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-weight: 990;
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 1030;
 }
 
-/* Logo */
+/* ------------------------
+Logo
+------------------------ */
 .navbar-custom .navbar-brand {
   font-size: 1.2rem;
   font-weight: 700;
@@ -28,14 +30,18 @@
 }
 
 .navbar-custom .navbar-brand img {
-  height: 50px;         /* Ajusta el alto del logo al navbar */
-  width: auto;          /* Mantiene proporción */
-  object-fit: contain;  /* Contiene la imagen sin deformar */
+  height: 110px;          /* Ajusta el alto del logo al navbar */
+  width: auto;           /* Mantiene proporción */
+  object-fit: contain;   /* Contiene la imagen sin deformar */
   display: block;
   margin-right: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(-5px) translateX(50px);
 }
 
-/* Links principales */
+/* ------------------------
+Links principales
+------------------------ */
 .navbar-custom .navbar-nav {
   gap: 1rem;
 }
@@ -43,15 +49,16 @@
 .navbar-custom .nav-link {
   position: relative;
   color: var(--color-dark);
-  font-weight: 700;
-  font-size: 0.8rem;
+  font-weight: 300px;
+  font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1rem 1rem;
   transition: color 0.3s ease;
+  font-family: var(--font-sans);
 }
 
-/* Subrayado animado */
 .navbar-custom .nav-link::after {
   content: "";
   position: absolute;
@@ -69,18 +76,19 @@
 .navbar-custom .nav-link.active::after {
   transform: scaleX(1);
 }
-
-/* Hover y activo */
+/* -------------------------------
+Hover y activo
+------------------------------- */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
   color: var(--color-primary);
 }
 
 /* ========================
-   DROPDOWN
+DROPDOWN
 ======================== */
 .navbar-custom .dropdown-menu {
-  font-size: 1rem;
+  font-size: 0.2px;
   padding: 0.3rem 0;
   border-radius: 0;
   border: none;
@@ -93,23 +101,31 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Mostrar dropdown al hacer hover (solo desktop) */
+/* -------------------------------------------------------
+Mostrar dropdown al hacer hover (solo desktop)
+------------------------------------------------------- */
 .navbar-custom .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
-/* Items del dropdown */
+/*------------------------------
+Items del dropdown
+  -------------------------------*/
 .navbar-custom .dropdown-item {
   padding: 0.5rem 1rem;
-  font-weight: 500;
+  font-weight: 200;
   color: var(--color-dark);
   transition: color 0.3s ease;
   background-color: transparent;
+  font-size: 1rem;
+  font-family: var(--font-subtitle);
 }
 
-/* Hover y foco del dropdown */
+/*-------------------------------
+Hover y foco del dropdown
+-------------------------------*/
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus {
   color: var(--color-primary);
@@ -117,7 +133,7 @@
 }
 
 /* ========================
-   TOGGLER (menú móvil)
+TOGGLER (menú móvil)
 ======================== */
 .navbar-custom .navbar-toggler {
   border: none;
@@ -129,7 +145,10 @@
   box-shadow: none;
 }
 
-/* Mega menú ancho completo */
+/* ========================
+MEGA MENÚ
+======================== */
+/* Contenedor ancho completo */
 .navbar-custom .dropdown-menu.mega-menu {
   width: 100%;
   left: 0;
@@ -140,4 +159,14 @@
 /* Columnas dentro del mega menú */
 .navbar-custom .mega-menu .col-md-4 {
   padding: 0rem;
+}
+
+/* Títulos de columna */
+.navbar-custom .mega-menu .dropdown-header {
+  font-size: 1.1rem;    /* tamaño más grande que los sub-items */
+  font-weight: 500;      /* más negrita */
+  padding-bottom: 0.5rem;
+  color:9894A0;
+  font-family: var(--font-title);
+
 }

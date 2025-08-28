@@ -2,10 +2,11 @@
    VARIABLES GLOBALES
 ========================= */
 :root {
-  --font-sans: 'Open Sans', sans-serif;
-  --font-title: 'Montserrat', sans-serif;
+  --font-sans: 'Proxima Nova ', sans-serif;
+  --font-title: 'Proxima Nova Regular', sans-serif;
+  --font-subtitle: 'Proxima Nova Light', sans-serif;
 
-  --color-primary: #156082;    /* Azul */
+  --color-primary: #5a9cc9;    /* Azul */
   --color-dark: #000000;       /* Negro */
   --color-light: #ffffff;      /* Blanco */
   --color-gray: #f8f9fa;       /* Fondo claro */
@@ -23,7 +24,8 @@ body {
 }
 
 main {
-  padding-top: 80px; /* espacio para navbar fijo */
+  padding-top: 80px;
+  background-color: var(--color-gray);
 }
 
 /* =========================
@@ -164,6 +166,7 @@ p, li, a, span {
     font-size: 0.9rem;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-family: var(--font-subtitle);
 }
 
 .site-footer ul li a:hover {
@@ -175,8 +178,8 @@ p, li, a, span {
     text-decoration: none;
     color: #ccc;
     display: block;        /* Uno debajo del otro */
-    margin-bottom: 0.5rem; /* Separación entre iconos */
-    font-size: 1.2rem;     /* Tamaño de los iconos */
+    margin-bottom: 0.6rem; /* Separación entre iconos */
+    font-size: 1rem;     /* Tamaño de los iconos */
     transition: color 0.3s ease;
 }
 
@@ -217,15 +220,6 @@ p, li, a, span {
   flex-direction: column; /* Texto debajo del logo */
   align-items: center; /* centra logo y texto */
   gap: 10px;           /* Espacio entre logo y texto */
-}
-
-.typewriter {
-  display: inline-block;
-  font-family: monospace;
-  overflow: hidden;
-  border-right: .15em solid #000; /* Cursor */
-  white-space: nowrap;
-  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
 /* Animación de escritura */
