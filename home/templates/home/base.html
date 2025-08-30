@@ -1,17 +1,25 @@
-
-  <!DOCTYPE html>
-  <html lang="es">
-
+<!DOCTYPE html>
+<html lang="es">
 
     {% include "home/includes/head.html" %}
 
-    <body>
+<body>
+    <!-- Navbar fijo -->
     {% include "home/includes/navbar.html" %}
-      <main class="container-fluid py-4">
-        {% block content %}{% endblock %}
-      </main>
 
-      {% include "home/includes/footer.html" %}
-      {% include "home/includes/scripts.html" %}
-      {% block extra_scripts %}{% endblock %}
-    </body>
+    <!-- Main: contenido principal -->
+    <main class="container-xxl mt-5 pt-2">
+        {% block content %}
+        {# Aquí van tus secciones o bloques de Wagtail #}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include "home/includes/footer.html" %}
+
+    <!-- Scripts JS -->
+    {% include "home/includes/scripts.html" %}
+    {% block extra_scripts %}
+    {% endblock %}
+</body>
+</html>

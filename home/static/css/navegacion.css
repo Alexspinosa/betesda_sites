@@ -49,9 +49,9 @@ Links principales
 .navbar-custom .nav-link {
   position: relative;
   color: var(--color-dark);
-  font-weight: 300px;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.8rem;
+  font-weight: 796;
+  line-height: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1rem 1rem;
@@ -59,6 +59,9 @@ Links principales
   font-family: var(--font-sans);
 }
 
+/* -------------------------------
+Subrayado
+------------------------------- */
 .navbar-custom .nav-link::after {
   content: "";
   position: absolute;

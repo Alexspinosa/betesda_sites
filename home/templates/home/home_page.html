@@ -5,7 +5,7 @@
 {% load static %}
 {% block content %}
   {% for block in page.body %}
-    <section class="py-5" id="section-{{ forloop.counter }}">
+    <section class="py-5 pt-5" id="section-{{ forloop.counter }}">
       <div class="container">
         {% if block.block_type == "card" %}
           <div class="row">
