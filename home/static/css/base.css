@@ -1,10 +1,15 @@
 /* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
    VARIABLES GLOBALES
 ========================= */
 :root {
-  --font-sans:  sans-serif;
-  --font-title: 'Proxima Nova Regular', sans-serif;
-  --font-subtitle: 'Proxima Nova Light', sans-serif;
+  --font-sans:  'Montserrat', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+  --font-subtitle: 'Montserrat', sans-serif;
 
   --color-primary: #5a9cc9;    /* Azul */
   --color-dark: #000000;       /* Negro */
@@ -17,6 +22,7 @@
 ========================= */
 body {
   font-family: var(--font-sans);
+  font-weight: 400;
   background-color: var(--color-gray);
   color: var(--color-dark);
   line-height: 1.6;
@@ -39,6 +45,7 @@ h1, h2, h3, h4, h5 {
 
 p, li, a, span {
   font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 /* =========================
@@ -122,14 +129,12 @@ p, li, a, span {
 
 /* ======================== FOOTER ======================== */
 .site-footer {
-    background-color: #000000; /* Fondo oscuro */
+    background-color: #000000;
     color: #ccc;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    font-family: var(--font-body);
 }
 
-/* ======================== LOGO Y TEXTO ======================== */
 .site-footer .footer-logo {
     height: 60px;
     margin-bottom: 0.5rem;
@@ -141,7 +146,6 @@ p, li, a, span {
     margin: 0;
 }
 
-/* ======================== TITULOS ======================== */
 .site-footer .footer-title {
     font-weight: 700;
     text-transform: uppercase;
@@ -150,7 +154,6 @@ p, li, a, span {
     font-size: 0.9rem;
 }
 
-/* ======================== LISTAS ======================== */
 .site-footer ul {
     list-style: none;
     padding: 0;
@@ -173,13 +176,12 @@ p, li, a, span {
     color: var(--color-primary);
 }
 
-/* ======================== REDES SOCIALES ======================== */
 .site-footer .social-link {
     text-decoration: none;
     color: #ccc;
-    display: block;        /* Uno debajo del otro */
-    margin-bottom: 0.6rem; /* Separación entre iconos */
-    font-size: 1rem;     /* Tamaño de los iconos */
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -187,14 +189,12 @@ p, li, a, span {
     color: var(--color-primary);
 }
 
-/* ======================== FILA Y COLUMNAS ======================== */
 .site-footer .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem; /* Espacio entre columnas */
+    gap: 2rem;
 }
 
-/* ======================== LINEA INFERIOR ======================== */
 .site-footer .footer-bottom {
     border-top: 1px solid #444;
     padding-top: 1.5rem;
@@ -203,13 +203,12 @@ p, li, a, span {
     color: #aaa;
 }
 
-/* ======================== RESPONSIVE ======================== */
 @media (max-width: 768px) {
     .site-footer .text-lg-start {
         text-align: center !important;
     }
     .site-footer .social-link {
-        display: inline-block; /* Horizontal en móvil si quieres */
+        display: inline-block;
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
     }
@@ -217,19 +216,7 @@ p, li, a, span {
 
 .logo-container {
   display: flex;
-  flex-direction: column; /* Texto debajo del logo */
-  align-items: center; /* centra logo y texto */
-  gap: 10px;           /* Espacio entre logo y texto */
-}
-
-/* Animación de escritura */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* Cursor parpadeante */
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: black; }
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
